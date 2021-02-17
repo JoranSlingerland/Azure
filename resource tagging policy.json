@@ -1,0 +1,80 @@
+{
+    "mode": "Indexed",
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "[concat('tags[', parameters('tagName1'),  ']')]",
+            "exists": "false"
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName2'),  ']')]",
+            "exists": "false"
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName3'),  ']')]",
+            "exists": "false"
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName4'),  ']')]",
+            "exists": "false"
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName5'),  ']')]",
+            "exists": "false"
+          },
+          {
+            "field": "[concat('tags[', parameters('tagName6'),  ']')]",
+            "exists": "false"
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    },
+    "parameters": {
+      "tagName1": {
+        "type": "String",
+        "metadata": {
+          "displayName": "tagName1",
+          "description": "Name of first tag, such as 'env' or 'Workloadname'"
+        }
+      },
+      "tagName2": {
+        "type": "String",
+        "metadata": {
+          "displayName": "tagName2",
+          "description": "Name of first tag, such as 'env' or 'Workloadname'"
+        }
+      },
+      "tagName3": {
+        "type": "String",
+        "metadata": {
+          "displayName": "tagName3",
+          "description": "Name of first tag, such as 'env' or 'Workloadname'"
+        }
+      },
+      "tagName4": {
+        "type": "String",
+        "metadata": {
+          "displayName": "tagName4",
+          "description": "Name of first tag, such as 'env' or 'Workloadname'"
+        }
+      },
+      "tagName5": {
+        "type": "String",
+        "metadata": {
+          "displayName": "tagName5",
+          "description": "Name of first tag, such as 'env' or 'Workloadname'"
+        }
+      },
+      "tagName6": {
+        "type": "String",
+        "metadata": {
+          "displayName": "tagName",
+          "description": "Name of first tag, such as 'env' or 'Workloadname'"
+        }
+      }
+    }
+  }
