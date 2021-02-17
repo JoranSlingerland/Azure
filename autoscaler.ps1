@@ -49,7 +49,7 @@ $VerbosePreference = "Continue"
 
 # Server start threshold
 # Number of available sessions to trigger a server start or shutdown
-$serverStartThreshold = <enter threshold value>
+$serverStartThreshold = 2
 
 # Peak time and Threshold settings
 # Set usePeak to $true to enable peak time, $false to disable
@@ -59,22 +59,22 @@ $serverStartThreshold = <enter threshold value>
 # Set the Peak Threshold, the spare capacity during peak hours (not required if useBreadthFirstDuringPeak is used)
 # Set the Start and Stop Peak Time, use a 24 hour format of Hour:Minute:Seconds (08:30:00)
 # Set the time zone to use, use "Get-TimeZone -ListAvailable" to list ID's
-$usePeak = <enter $true or $false, update settings below>
-$useBreadthFirstDuringPeak = <enter $true or $false>
-$peakServerStartThreshold = 4
+$usePeak = $true
+$useBreadthFirstDuringPeak = $false
+$peakServerStartThreshold = 5
 $startPeakTime = '08:00:00'
 $endPeakTime = '18:00:00'
-$timeZone = "Central Standard Time"
+$timeZone = "W. Europe Standard Time"
 $peakDay = 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'
 
 # Host Pool Name
-$hostPoolName = '<enter host pool name>'
+$hostPoolName = 'hp-wvd-prod-westeu-001'
 
 # Session Host Resource Group
 # Session Hosts and Host Pools can exist in different Resource Groups, but are commonly the same
 # Host Pool Resource Group and the resource group of the Session host VM's.
-$hostPoolRg = '<enter Host Pool resource group>'
-$sessionHostVmRg= '<enter VM resource group>'
+$hostPoolRg = 'rg-wvd- prod-westeu-001'
+$sessionHostVmRg= 'rg-wvd- prod-westeu-001'
 
 ############## Functions ####################
 
